@@ -8,7 +8,7 @@ Updated 17 October 2026 after signing in through the browser. This record supers
 - Source, tests, dependency manifests, Dockerfile, CI workflow, CODEOWNERS, PR template, documentation and local logs uploaded through the authenticated GitHub web interface.
 - Successful main workflow: https://github.com/geetikareddy98-beep/internal-practicals-fastapi/actions/runs/39026777026
 - Verified run commit: c3f856a94ebe2198521099416ee2f524c2b3b712.
-- Run summary reports success for lint, tests and container-build; publish-ghcr is skipped because publication is disabled. Test-reports artifact is present.
+- Run summary reports success for lint, tests and container-build; publish-ghcr was skipped on this initial run; the later approved publication is recorded below. Test-reports artifact is present.
 - GitHub annotations report deprecation of Node 20 in the example action versions and an upcoming ubuntu-latest runner migration. These are warnings/notices, not failed checks.
 - Private Projects board: https://github.com/users/geetikareddy98-beep/projects/1
 - Board statuses: Backlog, Ready, In Progress, In Review, Done, in that order.
@@ -23,7 +23,7 @@ GitHub explicitly says these protection rules will NOT be enforced for this priv
 
 The Copilot web interface initially reported license setup in progress. A real refactoring prompt was attempted, but no assistant response appeared; after reload, the interface redirected to Copilot Pro signup. No subscription was started and no billing information was entered. This attempt is not accepted as completed Copilot-assisted development. Enable an eligible Copilot experience before recording real suggestions.
 
-Docker is not available locally. The successful hosted container-build job does not replace the requested local Docker build/run evidence. GHCR publication remains disabled and needs explicit approval.
+Docker is not available locally. The successful hosted container-build job does not replace the requested local Docker build/run evidence. GHCR was initially disabled; the later explicitly approved publication is recorded below.
 
 ## Local Git and remote history
 
@@ -36,4 +36,22 @@ The local project was committed as 854c117 using the already configured identity
 - `screenshots/04-actions-success.jpg`: actual successful Actions run.
 - `screenshots/11-api-docs.jpg`: actual local API documentation.
 
-Feature PR, board screenshot and any later work are recorded in subsequent updates. No successful publication, independent review or Copilot output is fabricated.
+## Verified approved merge and publication
+
+The user explicitly approved merging PR #8 and publishing a private GHCR image. PR https://github.com/geetikareddy98-beep/internal-practicals-fastapi/pull/8 passed its three checks and was merged. It closed linked issue #3. Its check run is https://github.com/geetikareddy98-beep/internal-practicals-fastapi/actions/runs/39027751019.
+
+Repository variable ENABLE_GHCR_PUBLISH was set to true. Main run https://github.com/geetikareddy98-beep/internal-practicals-fastapi/actions/runs/39027867693 succeeded in lint, tests, container-build and publish-ghcr. The actual hosted test log reports Python 3.12.15, 28 passed in 0.96 seconds, and 100% application coverage. The local run used Python 3.12.14 and has its own saved results.
+
+Published image: `ghcr.io/geetikareddy98-beep/internal-practicals-fastapi:6e35136ad14933da7c65142053d14917d7c08ce9`
+
+Verified image digest: `sha256:88325555a103deaba0c904c3bdee6c24dde3b2599306cddcac38b145bdcc2126`
+
+Package page: https://github.com/geetikareddy98-beep/internal-practicals-fastapi/pkgs/container/internal-practicals-fastapi. Its heading explicitly shows Private. Screenshots of the package and publisher are saved. Issue #5 was updated with the real URL/tag/digest and closed as completed; automation moved it to Done.
+
+Board fields now include Status, Assignees, Priority, Due Date and Iteration. Iteration uses GitHub's default two-week periods starting 17 October 2026; no exam deadline or task due dates were invented or assigned. The bug/documentation labels existed by default; CI/CD and security labels were created. Issue #7 is labeled documentation and remains In Progress until the full evidence set is finished.
+
+## Remaining Copilot and local Docker work
+
+Copilot settings now show Free, chat enabled and zero usage. However, repeated actual prompt attempts produced no response. The browser log reports `CopilotAuthTokenUnlicensedError: Copilot auth token endpoint not found (404)`. The earlier signup redirect did not result in a subscription or billing changes. The prompt remains prepared for a user-resolved Copilot session. No generated suggestion or completed Copilot development is claimed.
+
+Local Docker installation/engine access and plan-supported branch-protection enforcement remain unfinished. Successful hosted container execution does not replace local evidence. The original student name still needs confirmation before any exam cover sheet is changed.

@@ -1,26 +1,24 @@
 # Genuine evidence checklist
 
-For the current GitHub results, see [GitHub execution record](github-progress.md). The initial pending entries below predate account sign-in.
+The actual execution record is [github-progress.md](github-progress.md). All screenshots listed as captured are real browser captures from this project; no Copilot output or local Docker success is fabricated.
 
-Local logs are created by execution and saved under `local/`. They are evidence of local commands only, not screenshots or remote Actions/Copilot success. The original exam documents contain no screenshots. Do not submit this project as fully complete until the pending account tasks and evidence are finished.
+| Evidence | Status |
+| --- | --- |
+| Local lint/tests/coverage | Captured in local/results.txt; 28 passed and 100% coverage |
+| Local live HTTP | Captured in local/http-smoke.json; 200/201/422 |
+| API documentation | screenshots/11-api-docs.jpg and generated docs/openapi.json |
+| Organized private repository | screenshots/01-repository-files.jpg |
+| Merged feature PR | screenshots/02-pr-merged.jpg; PR #8 |
+| Branch-protection configuration | screenshots/03-branch-protection-plan-limit.jpg; plan prevents enforcement |
+| Successful main Actions | screenshots/04-actions-success.jpg |
+| Hosted CI coverage | screenshots/10-ci-coverage.jpg and local/github-test-log-snapshot.txt |
+| Private board | screenshots/05-board.jpg and 05-board-done.jpg show both horizontal sections |
+| Successful GHCR publishing | screenshots/06-publish-success.jpg |
+| Private package | screenshots/06-ghcr-private.jpg; SHA tag/digest recorded in github-progress.md |
+| Local Docker build/run | Pending working Docker engine |
+| Actual Copilot API/test/refactor/documentation work | Pending working Copilot authentication |
+| Copilot CLI | Conditional on supported installed product; not executed |
 
-| Evidence | What to capture | Status |
-| --- | --- | --- |
-| Local Ruff and pytest | Full command, successful output, coverage percentage | See `local/results.txt` after execution |
-| Live API | Real health response, successful POST, 422 invalid request | See `local/http-smoke.json` after execution; browser screenshot pending |
-| Local Docker | Build output, running container, real health response | Pending Docker engine |
-| Repository | Actual URL, organized files, main and feature branch | Pending GitHub setup |
-| Pull request | Linked issue, real changes, review and passing checks | Pending |
-| Branch protection | Actual effective main settings and required check names | Pending |
-| Actions run | Green run with lint/tests/container jobs and commit SHA | Pending |
-| GHCR image | Successful publisher, package URL, SHA tag and digest | Pending approval and publication |
-| Projects board | All five statuses and example real issues visible | Pending |
-| Issue automation | Acceptance criteria, linked PR, genuine resulting status | Pending |
-| Copilot API/test generation | Actual prompt and visible suggestion in VS Code | Pending real Copilot session |
-| Copilot refactor | Original, actual explain/refactor response, accepted result | Pending |
-| Copilot documentation/CLI | Actual review; installed CLI help/output if supported | Pending |
-| OpenAPI | Interactive /docs and real generated schema | Captured: `screenshots/11-api-docs.jpg`; schema in `docs/openapi.json` |
+The board's item-closed automation and merged linked PR moved completed API, test/refactor, CI and publisher work to Done. Incomplete Docker, Copilot and full-evidence tasks remain open. Keep the full-evidence task open until those missing sources are captured.
 
-Keep screenshots in `screenshots/` only after capturing them from the actual project. Suggested names: `01-repository.png`, `02-pr-checks.png`, `03-branch-protection.png`, `04-actions-success.png`, `05-board.png`, `06-ghcr.png`, `07-copilot-api.png`, `08-copilot-tests.png`, `09-copilot-refactor.png`, `10-coverage.png`, `11-api-docs.png`, `12-local-docker.png`. These are planned names, not existing files.
-
-Record URLs and commit SHAs alongside screenshots; avoid credentials in view. Complete the session record in `docs/copilot-evidence.md`. Keep pending items visibly pending until verified. Original source assignment documents have not been modified, and no student identity or signature has been fabricated.
+Original exam documents have not been modified. Check the submission identity before adding final evidence to them. Never submit the attempted Copilot prompt as successful Copilot assistance.
