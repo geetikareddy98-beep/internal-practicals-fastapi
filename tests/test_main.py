@@ -68,6 +68,14 @@ def test_malformed_json(client):
     assert items == []
 
 
+def test_top_level_json_array_returns_422(client):
+    """Copilot suggested testing a body with the wrong top-level shape."""
+    response = client.post("/items", json=[{"name": "foo"}])
+    assert response.status_code == 422
+    assert response.json()["detail"][0]["loc"] == ["body"]
+    assert items == []
+
+
 def test_repeated_requests(client):
     for identifier, name in enumerate(["One", "Two", "One"], start=1):
         response = client.post("/items", json={"name": name})
