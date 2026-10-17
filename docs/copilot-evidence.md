@@ -1,55 +1,24 @@
-# Copilot development and evidence procedure
+# Actual Copilot assistance and review
 
-## Current account status
+On 17 October 2026, signed-in GitHub Copilot Free web chat returned real suggestions. Earlier authentication failures are historical and have been resolved for web chat. The interface selected Auto and identified gpt-5-mini in its retry control. This is browser Copilot evidence, not VS Code or Copilot CLI evidence.
 
-GitHub is signed in and account settings show Copilot Free. Browser prompt attempts returned no assistant output; the browser reports CopilotAuthTokenUnlicensedError (404). Earlier setup redirected to Pro signup; no payment or subscription was made. Resolve the Copilot account/editor access before recording actual suggestions. This remains incomplete.
+Session: https://github.com/copilot/c/e6e25885-8b7b-44a1-8d2e-cef62261f0a2 (account access may be required). Exact prompts and visible responses are preserved in `evidence/copilot/session-visible.txt`; generated source and actual browser screenshots are retained alongside it.
 
-## Actual provenance
+## Provenance and reviewed decisions
 
-The initial local implementation, tests and documentation were produced with Codex in this chat. This is not evidence of GitHub Copilot use. GitHub Copilot was not detected in the inspected VS Code extension inventory. No Copilot prompt, suggestion acceptance, timing gain or successful CLI invocation is claimed here.
+The initial application, tests and documentation were produced with Codex. They are not retroactively attributed to Copilot. Copilot then independently generated an API module, pytest suite, numeric refactor and README/API reference for comparison and review.
 
-Use genuine Copilot assistance on the feature branch, keep small reviewed changes, and rerun the entire suite. Do not replace this record with a fictional past session.
+1. Refactor prompt described the legacy index loop and requested typed summation ignoring None, zero for empty/all-None, and empty/mixed/negative/decimal tests. Copilot generated `sum(v for v in values if v is not None)`. The existing project already used that correct algorithm; its narrower list type hint was retained. Accepted the useful `pytest.approx(0.3)` case for `[0.1, 0.2, None]` in `tests/test_numeric.py`. Rejected optional always-float conversion and unnecessary runtime coercion. Five baseline comparisons remain in `evidence/local/refactor-comparison.json`. No measured speed gain is claimed.
+2. API/test prompt supplied exact health/items contract, whitespace behavior and validation cases. Copilot generated `main.py` and `test_main.py`, saved in `evidence/copilot/`. Accepted its top-level JSON-array rejection case, adapted to existing fixtures, adding assertions for validation location and unchanged state. Retained the existing typed application rather than introduce the generated deprecated startup-event handler and untyped route returns. Its claim that plain Pydantic str would coerce numbers is incorrect for this installed Pydantic 2 configuration; existing numeric-input tests verify 422. Extra endpoints/database suggestions were outside scope and rejected.
+3. Documentation prompt supplied actual module path, Python version, API responses, in-memory limitation and coverage command. Copilot produced a README/API reference and explained `--cov=app` and `--cov-report=term-missing`. Accepted the explanation that executed lines do not prove correct assertions or concurrency behavior, added to README. Corrected its generic dependency advice: this project uses pinned supported httpx test dependencies, not requests as a substitute; the actual utility is `app/numeric.py`, not suggested utils.py. Extra fields are ignored under the real model default, so its single-property phrasing is not treated as rejection of all additional fields. Windows examples remain PowerShell-compatible.
 
-## Setup
+## Evidence and validation
 
-Open this folder in VS Code. Follow the official setup page: https://docs.github.com/en/copilot/how-tos/copilot-in-your-ide/set-up-copilot/install-copilot-extension. Install/enable the supported official GitHub Copilot experience and sign in directly yourself. Confirm account entitlement; never share tokens or passwords here. Record the editor and Copilot version visible in the installed environment. Copilot Chat is distinct from the Microsoft Windows Copilot app.
+- `07-copilot-api.jpg`, `08-copilot-tests.jpg`, `09-copilot-refactor.jpg`, `12-copilot-documentation.jpg`: genuine browser captures.
+- `evidence/copilot/`: raw visible conversation and independently generated drafts. Drafts use .txt to avoid confusing them with accepted production code.
+- `evidence/local/results-after-copilot.txt`: actual Ruff check/format and full suite after accepted changes. 30 tests pass with 100% application line/branch coverage, enforcing minimum 81%.
+- Initial hosted evidence shows 28 tests; this remains accurate historical evidence. New remote CI must verify the added cases.
 
-## Small verifiable tasks
+No Copilot extension or CLI was installed/detected in the inspected environment. Product-specific slash commands/CLI integration are conditional in the exam. Ordinary-language web prompts exercised generation, explanation, refactoring and documentation. The test command was explained by actual Copilot, but no Copilot CLI invocation is claimed. If the instructor requires IDE/CLI specifically, complete an additional real session in that supported product.
 
-For each task, capture the actual prompt and response, inspect the proposal, record accepted/rejected parts and why, and rerun lint/tests/coverage. Where a slash command is absent, use the equivalent ordinary-language prompt.
-
-1. API review or generation: “Review this FastAPI teaching API. GET /health must return 200 and {status: ok}. POST /items must accept a required string name of 1–100 characters, return 201 with id and name, and return 422 for invalid input. Preserve whitespace and Unicode as the assignment example does. Explain assumptions, propose a focused improvement only if needed, and do not add secrets or unrelated endpoints.” For genuine generation evidence, ask Copilot to independently draft a small module in a scratch file and compare it to the current contract; retain only reviewed changes, with provenance recorded.
-2. Tests: “Review tests/test_main.py against this contract. Suggest a meaningful uncovered validation case, explain what bug it would detect, and generate one pytest test. Keep state isolated and check both status and body.” Review and integrate a useful test or record why no change was needed. Capture real output rather than presupposing its content.
-3. Refactor exercise: put this original example in a scratch editor, ask Copilot to explain it, then request the typed refactor. Keep screenshots of both versions and the real response.
-
-```python
-def total(values):
-    result = 0
-    for i in range(len(values)):
-        if values[i] != None:
-            result = result + values[i]
-    return result
-```
-
-Prompt: “Explain this numeric function and its assumptions. Refactor using Python type hints so it sums int/float values and ignores None using an identity check. Empty/all-None input must return zero. Do not silently convert strings. Provide tests for empty, all-None, mixed, negative and decimal values. Explain correctness and time/space complexity without claiming measured speed or complexity-score improvements.”
-
-4. Documentation: “Review README.md and the generated OpenAPI schema against app/main.py. Confirm request types, 201/422 responses, the 100-character boundary, setup commands and in-memory limitations. Suggest precise corrections.” Check every claim before accepting it.
-5. CLI (conditional): inspect the product/version actually installed, check the current official GitHub Copilot CLI documentation, and use its supported help/interface to explain a small test command. Do not assume an old `gh copilot` command is present. Record exact installed syntax and real output, or mark CLI unavailable and explain the product limitation as permitted by the document. Avoid commands that disclose environment variables, delete files or change account permissions.
-
-## Review principles
-
-Generated code remains a draft. Check validation, defaults, exception handling, dependencies and licensing when incorporating external code. Keep secrets and private material out of prompts. A passing coverage number cannot replace meaningful assertions. Record task duration and review iterations only when measured; compare similar tasks before asserting productivity improvement. Profiling and representative benchmarks are needed before asserting optimization gains. No benchmark improvement is claimed for the generator-expression refactor.
-
-## Session record to complete after actual use
-
-| Field | Actual record |
-| --- | --- |
-| Date, editor version and Copilot version | Pending |
-| Task and exact prompt | Pending |
-| Suggestion and screenshot filename | Pending |
-| Accepted/rejected code and reason | Pending |
-| Commit/PR connecting the reviewed change | Pending |
-| Actual verification commands and results | Pending |
-| Measured duration/review iterations, if tracked | Pending |
-
-Do not mark the Copilot practical complete until real interaction and the required review/verification evidence have been recorded.
+Review was human-led in scope and performed with Codex assistance: check contract, dependencies, security, test assertions and limitations before accepting changes. No secrets or original private exam documents were sent to Copilot; prompts contained the small teaching contract only. No time savings, benchmark improvements or independent human approval are invented. Source documents retain their original submission name; confirm identity before adding a cover sheet.
