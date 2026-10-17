@@ -1,0 +1,130 @@
+[
+  {
+    "path": ".dockerignore",
+    "sha256": "55b62e3b46b34edaed9f690476fda0f607bb0e61a79f7c1220aa845ea7e40501"
+  },
+  {
+    "path": ".gitignore",
+    "sha256": "33315233ec0cc4f218bc4b31f94417a31d808ddeaeca58640d2b6b35e6e0d0d2"
+  },
+  {
+    "path": "Dockerfile",
+    "sha256": "5f2c1b7ad93409f34be5a53f4b49a8784d68d1599b5840c6ce0191b2baae2031"
+  },
+  {
+    "path": "pyproject.toml",
+    "sha256": "f9ceec981334ffe64212eefdc1b32c4a6dd4fa39c0d0f1b99c9b7fdd6e9b3c56"
+  },
+  {
+    "path": "README.md",
+    "sha256": "23ef54a87084608241f8128fa26166e355208d35380d1dd0291997c7476bb9d3"
+  },
+  {
+    "path": "requirements-runtime.txt",
+    "sha256": "d10db226b36495e402cff9e93fd3e8a83ed03ed0b5d1f1acab85c25d83fe3b2c"
+  },
+  {
+    "path": "requirements.txt",
+    "sha256": "50dfe7d350355550d6d3c8f6f64c57d36894db37047a24c8f1024b4db1128477"
+  },
+  {
+    "path": "START-HERE.md",
+    "sha256": "665533194a37558a5316b2e09b4be3dd22510d41c10de30a4b41f6d3caf41521"
+  },
+  {
+    "path": ".github/CODEOWNERS",
+    "sha256": "e8416862b2ef652f6cc45e1a5ce0e887c58bb8e2aa617f199426ad4d4c1c1bfd"
+  },
+  {
+    "path": ".github/pull_request_template.md",
+    "sha256": "7d94950643d2b92fd072d0ffd39149399aecbb2761479c5e4483284000a3d17c"
+  },
+  {
+    "path": "app/main.py",
+    "sha256": "8a018cba9847677db8247bd5e2f8097e022a7614a9742c07783f34ba8e6d18a2"
+  },
+  {
+    "path": "app/numeric.py",
+    "sha256": "e74cb5152f82cb6577ca3bded7c0ccab0d179dd9abf33f6bec110794c09f735a"
+  },
+  {
+    "path": "app/__init__.py",
+    "sha256": "afd795b4a5419c27ae3aa282348c8d40250942c350d9a2370e10f9762e0fe4f4"
+  },
+  {
+    "path": "docs/api.md",
+    "sha256": "c5154b934093245224f2261bf2c29d452c45661cdf0a9d961ae533fa8730b559"
+  },
+  {
+    "path": "docs/copilot-evidence.md",
+    "sha256": "43c8d670fc9e490338e7e2b749c9f4c4fe18a37d78cd23a96575733fdfffe38d"
+  },
+  {
+    "path": "docs/devops.md",
+    "sha256": "3f6b22af6ff7d6f50fcce2a6fd671241e80baacc168a7ce447dd040ad9ea70a1"
+  },
+  {
+    "path": "docs/exam-checklist.md",
+    "sha256": "1412ed09f82666f7278ac6a5c4b3b813092a7032701383c0d3c83b6fb7f9e2fb"
+  },
+  {
+    "path": "docs/github-setup.md",
+    "sha256": "036d57224123b017c3716e81f03559decae240780b91bfe40031f47fb0618295"
+  },
+  {
+    "path": "docs/openapi.json",
+    "sha256": "ee20d877abae5baf0784491dd1f4cb01cfb98904b57341b2ef114b5cba49ac6b"
+  },
+  {
+    "path": "evidence/README.md",
+    "sha256": "80c0af9db4a7280d03e3f33ee21243c4c820aa836827d6529bbfbd14baa0ceff"
+  },
+  {
+    "path": "tests/test_main.py",
+    "sha256": "72f905d3f7b8148cdc67f2262ba95ec8bb068fa1af8e73c7a18c4617cb0c210c"
+  },
+  {
+    "path": "tests/test_numeric.py",
+    "sha256": "a4ee068f4fc217b1053d3e914e1e0ea36ca258ae8a0df6982d45ff93b85331f6"
+  },
+  {
+    "path": ".github/workflows/ci.yml",
+    "sha256": "c906b6cbaede381566b0d483c8ccc84b78754b15e5b4a45b5fd78fab3bf1bd70"
+  },
+  {
+    "path": "evidence/local/coverage.xml",
+    "sha256": "436206b425f2b3ad619585e7138b315bb230c230240fe15f30994ab54fdc4d32"
+  },
+  {
+    "path": "evidence/local/first-run-results.txt",
+    "sha256": "7012961d0da28970a9f25211a4c8c0eae4d1779b08eb86959e4807fef071707b"
+  },
+  {
+    "path": "evidence/local/http-smoke.json",
+    "sha256": "73ddf057faa9aeae665485094dd2e78f5479c2049d82201300cdb3e1b05d39bc"
+  },
+  {
+    "path": "evidence/local/pytest.xml",
+    "sha256": "c3665d8f8dc239b98b3f4fb0060c42183130db3c4109c68fa4a9d09e0d8a9005"
+  },
+  {
+    "path": "evidence/local/refactor-comparison.json",
+    "sha256": "80feaf51e53f443d7025bcd4c9257323eb7eb9a898250d23772dd7db708bc19d"
+  },
+  {
+    "path": "evidence/local/results.txt",
+    "sha256": "fba467efd62493235e7db4c44d9891a9eae8997882158ee7c8e1856d5bbd6e0a"
+  },
+  {
+    "path": "evidence/local/server.log",
+    "sha256": "938b79098d60bdfdc7d5a685eacc9f6e8b2fabce884c42753e28179678821e45"
+  },
+  {
+    "path": "evidence/local/workflow-validation.txt",
+    "sha256": "0e7676478900d707987daf75d643df4e24a08046886770722fa830ba7bc46609"
+  },
+  {
+    "path": "evidence/screenshots/11-api-docs.jpg",
+    "sha256": "83690240a77288efbe1cef1196ece3c94b899f43fc03f67de8c2ca91fc91137e"
+  }
+]

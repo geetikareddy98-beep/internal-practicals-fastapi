@@ -1,0 +1,36 @@
+{
+  "timestamp": "2026-10-17T15:54:55.371353+05:30",
+  "base_url": "http://127.0.0.1:18765",
+  "health": {
+    "status": 200,
+    "body": {
+      "status": "ok"
+    }
+  },
+  "created": {
+    "status": 201,
+    "body": {
+      "name": "Notebook",
+      "id": 1
+    }
+  },
+  "invalid": {
+    "status": 422,
+    "body": {
+      "detail": [
+        {
+          "type": "string_too_short",
+          "loc": [
+            "body",
+            "name"
+          ],
+          "msg": "String should have at least 1 character",
+          "input": "",
+          "ctx": {
+            "min_length": 1
+          }
+        }
+      ]
+    }
+  }
+}

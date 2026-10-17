@@ -1,0 +1,40 @@
+Actual local verification: 2026-10-17T15:54:55.371353+05:30
+Python: 3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]
+These are local commands, not GitHub Actions or Copilot evidence.
+
+COMMAND: C:\Users\geetika\Documents\Codex\2026-10-17\hi-3\work\.venv\Scripts\python.exe -m pip check
+No broken requirements found.
+
+
+EXIT CODE: 0
+
+COMMAND: C:\Users\geetika\Documents\Codex\2026-10-17\hi-3\work\.venv\Scripts\python.exe -m ruff check .
+All checks passed!
+
+
+EXIT CODE: 0
+
+COMMAND: C:\Users\geetika\Documents\Codex\2026-10-17\hi-3\work\.venv\Scripts\python.exe -m ruff format --check .
+13 files already formatted
+
+
+EXIT CODE: 0
+
+COMMAND: C:\Users\geetika\Documents\Codex\2026-10-17\hi-3\work\.venv\Scripts\python.exe -m pytest -q --cov=app --cov-branch --cov-report=term-missing --cov-report=xml:evidence/local/coverage.xml --junitxml=evidence/local/pytest.xml
+............................                                             [100%]
+=============================== tests coverage ================================
+______________ coverage: platform win32, python 3.12.14-final-0 _______________
+
+Name              Stmts   Miss Branch BrPart  Cover   Missing
+-------------------------------------------------------------
+app\__init__.py       0      0      0      0   100%
+app\main.py          16      0      0      0   100%
+app\numeric.py        2      0      0      0   100%
+-------------------------------------------------------------
+TOTAL                18      0      0      0   100%
+Coverage XML written to file evidence/local/coverage.xml
+Required test coverage of 81.0% reached. Total coverage: 100.00%
+28 passed in 2.33s
+
+
+EXIT CODE: 0

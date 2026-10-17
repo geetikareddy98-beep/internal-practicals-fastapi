@@ -1,0 +1,42 @@
+[
+  {
+    "input": [],
+    "legacy": 0,
+    "refactored": 0
+  },
+  {
+    "input": [
+      null,
+      null
+    ],
+    "legacy": 0,
+    "refactored": 0
+  },
+  {
+    "input": [
+      1,
+      null,
+      2
+    ],
+    "legacy": 3,
+    "refactored": 3
+  },
+  {
+    "input": [
+      -4,
+      null,
+      2
+    ],
+    "legacy": -2,
+    "refactored": -2
+  },
+  {
+    "input": [
+      1.5,
+      null,
+      2.25
+    ],
+    "legacy": 3.75,
+    "refactored": 3.75
+  }
+]

@@ -1,0 +1,2 @@
+Workflow YAML parsed successfully. Verified triggers, four jobs, publisher dependencies, publication guard, and token permissions.
+This is static validation, not a GitHub Actions run. Docker execution remains pending.
