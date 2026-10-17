@@ -1,0 +1,192 @@
+- link "Skip to content":
+  - /url: "#start-of-content"
+- banner "Global navigation menu":
+  - button "Open menu":
+  - link "Homepage (g then d)":
+    - /url: /
+  - navigation "Breadcrumbs":
+    - list:
+      - link "geetikareddy98-beep":
+        - /url: /geetikareddy98-beep
+        - generic: geetikareddy98-beep
+      - link "internal-practicals-fastapi":
+        - /url: /geetikareddy98-beep/internal-practicals-fastapi
+        - text: internal-practicals-fastapi
+      - button "Switch repository (alt shift r)":
+  - button "Open quick search dialog, type / to search":
+    - text: Type
+    - generic: /
+    - text: to search
+  - link "Chat with Copilot":
+    - /url: /copilot
+  - button "Open Copilot…":
+  - button "Create new...":
+  - link "All issues":
+    - /url: /issues
+  - link "All pull requests":
+    - /url: /pulls
+  - link "All repositories":
+    - /url: /repos
+  - link "You have no unread notifications (g then n)":
+    - /url: /notifications
+  - button "Open user navigation menu":
+    - img "User avatar"
+  - heading "Repository navigation" [level=2]
+  - navigation "Repository":
+    - list:
+      - link "Code":
+        - /url: /geetikareddy98-beep/internal-practicals-fastapi
+        - generic: Code
+      - link "Issues (3)":
+        - /url: /geetikareddy98-beep/internal-practicals-fastapi/issues
+        - generic: Issues
+        - generic: "3"
+        - generic: (3)
+      - link "Pull requests":
+        - /url: /geetikareddy98-beep/internal-practicals-fastapi/pulls
+        - generic: Pull requests
+      - link "Actions":
+        - /url: /geetikareddy98-beep/internal-practicals-fastapi/actions
+        - generic: Actions
+      - link "Projects":
+        - /url: /geetikareddy98-beep/internal-practicals-fastapi/projects
+        - generic: Projects
+      - link "Security and quality":
+        - /url: /geetikareddy98-beep/internal-practicals-fastapi/security
+        - generic: Security and quality
+      - link "Insights":
+        - /url: /geetikareddy98-beep/internal-practicals-fastapi/network/dependencies
+        - generic: Insights
+      - link "Settings":
+        - /url: /geetikareddy98-beep/internal-practicals-fastapi/settings
+        - generic: Settings
+- main:
+  - link "CI":
+    - /url: /geetikareddy98-beep/internal-practicals-fastapi/actions/workflows/ci.yml
+    - generic: CI
+  - img "completed successfully:"
+  - 'heading "Merge pull request #8 from geetikareddy98-beep/feature/record-github-… #6" [level=1]':
+    - generic: "Merge pull request #8 from geetikareddy98-beep/feature/record-github-… #6"
+  - button "Re-run all jobs":
+    - generic: Re-run all jobs
+  - button "Workflow run options":
+  - navigation "Workflow run":
+    - list:
+      - link "Summary":
+        - /url: /geetikareddy98-beep/internal-practicals-fastapi/actions/runs/39027867693
+        - generic: Summary
+      - heading "All jobs" [level=4]
+      - button "Filter by job status":
+      - list:
+        - link "lint":
+          - /url: /geetikareddy98-beep/internal-practicals-fastapi/actions/runs/39027867693/job/117382312945
+          - generic: lint
+        - link "tests":
+          - /url: /geetikareddy98-beep/internal-practicals-fastapi/actions/runs/39027867693/job/117382313031
+          - generic: tests
+        - link "container-build":
+          - /url: /geetikareddy98-beep/internal-practicals-fastapi/actions/runs/39027867693/job/117382313054
+          - generic: container-build
+        - link "publish-ghcr":
+          - /url: /geetikareddy98-beep/internal-practicals-fastapi/actions/runs/39027867693/job/117382374526
+          - generic: publish-ghcr
+      - heading "Run details" [level=3]
+      - list "Run details":
+        - link "Usage":
+          - /url: /geetikareddy98-beep/internal-practicals-fastapi/actions/runs/39027867693/usage
+          - generic: Usage
+        - link "Workflow file":
+          - /url: /geetikareddy98-beep/internal-practicals-fastapi/actions/runs/39027867693/workflow
+          - generic: Workflow file
+        - link "Lockfile":
+          - /url: /geetikareddy98-beep/internal-practicals-fastapi/actions/runs/39027867693/lockfile
+          - generic: Lockfile
+  - region "Check run summary":
+    - region "Annotations":
+      - button "Open job annotations":
+      - heading "Annotations" [level=2]
+      - generic: 1 warning and 1 notice
+    - link "tests":
+      - /url: "#logs"
+      - generic: tests
+    - generic: succeeded Oct 17, 20265 minutes ago in 17s
+    - textbox "Search":
+      - /placeholder: Search logs
+    - button "Re-run this job":
+    - button "Show options":
+      - img "Show options"
+    - generic "Set up job 1s":
+      - generic: Set up job
+      - generic: 1s
+    - generic "Run actions/checkout@v4 1s":
+      - generic: Run actions/checkout@v4
+      - generic: 1s
+    - generic "Run actions/setup-python@v5 1s":
+      - generic: Run actions/setup-python@v5
+      - generic: 1s
+    - generic "Run python -m pip install -r requirements.txt 7s":
+      - generic: Run python -m pip install -r requirements.txt
+      - generic: 7s
+    - generic "Run python -m pytest -q --cov=app --cov-branch --cov-report=term-missing --cov-report=xml:evidence/ci/coverage.xml --junitxml=evidence/ci/pytest.xml 3s" [active]:
+      - generic: Run python -m pytest -q --cov=app --cov-branch --cov-report=term-missing --cov-report=xml:evidence/ci/coverage.xml --junitxml=evidence/ci/pytest.xml
+      - generic: 3s
+    - link "1":
+      - /url: https://github.com/geetikareddy98-beep/internal-practicals-fastapi/actions/runs/39027867693/job/117382313031#step:5:1
+    - generic "Run python -m pytest -q --cov=app --cov-branch --cov-report=term-missing --cov-report=xml:evidence/ci/coverage.xml --junitxml=evidence/ci/pytest.xml":
+      - generic: Run python -m pytest -q --cov=app --cov-branch --cov-report=term-missing --cov-report=xml:evidence/ci/coverage.xml --junitxml=evidence/ci/pytest.xml
+    - link "11":
+      - /url: https://github.com/geetikareddy98-beep/internal-practicals-fastapi/actions/runs/39027867693/job/117382313031#step:5:12
+    - generic: ............................ [100%]
+    - link "12":
+      - /url: https://github.com/geetikareddy98-beep/internal-practicals-fastapi/actions/runs/39027867693/job/117382313031#step:5:13
+    - generic: ================================ tests coverage ================================
+    - link "13":
+      - /url: https://github.com/geetikareddy98-beep/internal-practicals-fastapi/actions/runs/39027867693/job/117382313031#step:5:14
+    - generic: "_______________ coverage: platform linux, python 3.12.15-final-0 _______________"
+    - link "14":
+      - /url: https://github.com/geetikareddy98-beep/internal-practicals-fastapi/actions/runs/39027867693/job/117382313031#step:5:15
+    - link "15":
+      - /url: https://github.com/geetikareddy98-beep/internal-practicals-fastapi/actions/runs/39027867693/job/117382313031#step:5:16
+    - generic: Name Stmts Miss Branch BrPart Cover Missing
+    - link "16":
+      - /url: https://github.com/geetikareddy98-beep/internal-practicals-fastapi/actions/runs/39027867693/job/117382313031#step:5:17
+    - generic: "-------------------------------------------------------------"
+    - link "17":
+      - /url: https://github.com/geetikareddy98-beep/internal-practicals-fastapi/actions/runs/39027867693/job/117382313031#step:5:18
+    - generic: app/__init__.py 0 0 0 0 100%
+    - link "18":
+      - /url: https://github.com/geetikareddy98-beep/internal-practicals-fastapi/actions/runs/39027867693/job/117382313031#step:5:19
+    - generic: app/main.py 16 0 0 0 100%
+    - link "19":
+      - /url: https://github.com/geetikareddy98-beep/internal-practicals-fastapi/actions/runs/39027867693/job/117382313031#step:5:20
+    - generic: app/numeric.py 2 0 0 0 100%
+    - link "20":
+      - /url: https://github.com/geetikareddy98-beep/internal-practicals-fastapi/actions/runs/39027867693/job/117382313031#step:5:21
+    - generic: "-------------------------------------------------------------"
+    - link "21":
+      - /url: https://github.com/geetikareddy98-beep/internal-practicals-fastapi/actions/runs/39027867693/job/117382313031#step:5:22
+    - generic: TOTAL 18 0 0 0 100%
+    - link "22":
+      - /url: https://github.com/geetikareddy98-beep/internal-practicals-fastapi/actions/runs/39027867693/job/117382313031#step:5:23
+    - generic: Coverage XML written to file evidence/ci/coverage.xml
+    - link "23":
+      - /url: https://github.com/geetikareddy98-beep/internal-practicals-fastapi/actions/runs/39027867693/job/117382313031#step:5:24
+    - generic: "Required test coverage of 81.0% reached. Total coverage: 100.00%"
+    - link "24":
+      - /url: https://github.com/geetikareddy98-beep/internal-practicals-fastapi/actions/runs/39027867693/job/117382313031#step:5:25
+    - generic: 28 passed in 0.96s
+    - generic "Export OpenAPI 0s":
+      - generic: Export OpenAPI
+      - generic: 0s
+    - generic "Run actions/upload-artifact@v4 1s":
+      - generic: Run actions/upload-artifact@v4
+      - generic: 1s
+    - generic "Post Run actions/setup-python@v5 0s":
+      - generic: Post Run actions/setup-python@v5
+      - generic: 0s
+    - generic "Post Run actions/checkout@v4 0s":
+      - generic: Post Run actions/checkout@v4
+      - generic: 0s
+    - generic "Complete job 0s":
+      - generic: Complete job
+      - generic: 0s
