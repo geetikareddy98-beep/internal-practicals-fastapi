@@ -2,6 +2,10 @@
 
 This teaching project supports Exam 1 GitHub DevOps and Exam 2 GitHub Copilot. It provides an in-memory Items API, validation tests, numeric refactoring, and CI/container configuration. See [the requirement checklist](docs/exam-checklist.md) for the distinction between implemented work and remaining account/evidence tasks.
 
+## Verified GitHub results
+
+The private repository, feature PR #8, main/PR CI checks, private Projects board and approved private GHCR publication are complete. See [the execution record](evidence/github-progress.md) for actual run links, image tag/digest and screenshots. Local Docker execution, genuine Copilot output and plan-supported branch-protection enforcement remain unfinished.
+
 ## Setup on Windows
 
 Use Python 3.12. From this project folder in PowerShell:

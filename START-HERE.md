@@ -1,22 +1,25 @@
-# Start here on this computer
+# Start here
 
-The local project is implemented and verified, but the exams are not yet ready for final submission. GitHub repository settings, board, Actions/GHCR results, local Docker execution and real Copilot evidence are still pending. The original exam documents were read fully and were not edited.
+The code and GitHub pipeline are working. Both exams still require genuine Copilot output, local Docker execution, and resolution of GitHub's private-repository branch-protection limitation before they can be called fully complete.
 
-## What already passed
+## Verified deliverables
 
-- 28 pytest tests; 100% measured application coverage; minimum enforced at 81%.
-- Ruff lint and formatting checks.
-- Dependency compatibility check.
-- Live HTTP requests: GET health 200, POST item 201, invalid item 422.
-- Five legacy/refactored numeric comparisons.
-- OpenAPI assertions and saved generated schema.
-- Actual browser rendering of API docs, with a genuine saved screenshot.
+- Private repository: https://github.com/geetikareddy98-beep/internal-practicals-fastapi
+- Feature PR #8 passed all three checks and was merged with user approval.
+- Main CI/CD run: https://github.com/geetikareddy98-beep/internal-practicals-fastapi/actions/runs/39027867693
+- Ruff passes; 28 tests pass with 100% measured coverage locally and in GitHub CI.
+- Live local API returns health 200, creation 201 and validation 422.
+- Hosted Docker image build and health smoke test pass.
+- Approved GHCR publication succeeded; actual package visibility verified Private.
+- Private board: https://github.com/users/geetikareddy98-beep/projects/1
+- Seven issues, five ordered statuses, assignees, Priority, Due Date, Iteration and completion automation are configured.
+- Genuine repository, PR, Actions, coverage, board, GHCR and API screenshots are saved under evidence/screenshots.
 
-See `evidence/local/results.txt`, `evidence/local/http-smoke.json`, `evidence/local/refactor-comparison.json`, `docs/openapi.json` and `evidence/screenshots/11-api-docs.jpg`. `first-run-results.txt` preserves an earlier passing run with a deprecation warning; the final run uses the documented httpx2 dependency and has no warnings. These are local results, not GitHub run records.
+Read docs/exam-checklist.md for every requirement and evidence/github-progress.md for verified URLs, image tag/digest and exact limitations.
 
-## Run now with the working environment
+## Run on this computer
 
-The environment created during this session lives outside the deliverable folder in the workspace `work` directory. These commands work on the current computer without relying on its broken default `python` alias:
+PowerShell commands using the working environment created during this session:
 
 ```powershell
 Set-Location 'C:\Users\geetika\Documents\Codex\2026-10-17\hi-3\outputs\shared-exam-project'
@@ -27,17 +30,23 @@ $examPython = 'C:\Users\geetika\Documents\Codex\2026-10-17\hi-3\work\.venv\Scrip
 & $examPython -m uvicorn app.main:app --reload
 ```
 
-Open http://127.0.0.1:8000/docs. Stop the server with Ctrl+C. A preview server was also started during this session on port 18765; availability after the session depends on the app's process lifecycle. Use these startup commands if the preview stops.
+Open http://127.0.0.1:8000/docs. Stop with Ctrl+C. The ZIP excludes the virtual environment and Git metadata. On another computer, follow README.md with a working Python 3.12 installation.
 
-For a portable setup after moving/unzipping the project, follow `README.md` using an installed working Python 3.12. The ZIP does not include a virtual environment, Git metadata or secrets.
+## Remaining personal steps
 
-## Remaining access and user decisions
+1. Resolve Copilot access in your account or editor. Settings show Free, but web chat reports an unlicensed authentication error and has returned no suggestion. No paid plan was purchased. Then complete the actual tasks in docs/copilot-evidence.md and capture real responses and reviewed changes.
+2. Install/start a working Docker engine if approved on this machine. Run the README build/run commands and capture local health evidence. Hosted CI evidence is already genuine but does not replace this local step.
+3. Ask your instructor how to handle branch protection on the approved private repository: GitHub explicitly reports the saved rule is not enforced under the current plan. No visibility or paid-plan change was made.
+4. Confirm the submission name before editing an exam cover sheet. The original documents name Sudheesh Vinnakota; they remain unchanged.
 
-1. Add and connect the suggested GitHub integration, or sign in directly to GitHub in the available browser. The inspected in-app session is signed out. Do not share credentials here.
-2. Confirm the GitHub owner, repository name and visibility. Proposed name: `internal-practicals-fastapi`. Repository publication and GHCR publication require your approval. The publisher stays disabled meanwhile.
-3. Confirm the commit author and student name: the supplied documents name Sudheesh Vinnakota; the machine's Git identity belongs to a different account. No commit has been made with an assumed identity.
-4. Open VS Code manually if automation cannot launch it. Install/enable the official GitHub Copilot experience and sign in yourself. Then follow the small tasks in `docs/copilot-evidence.md`; record real results and rerun checks.
-5. Provide a working Docker engine for the required local build/run. Docker was not found on PATH; no local container success is claimed.
-6. Follow `docs/github-setup.md` for exact push commands, real CODEOWNERS rules, PR, protection, board, issues, automation and approved publication. `docs/exam-checklist.md` tracks every document section; `evidence/README.md` lists each screenshot still needed.
+## Continue Git work safely
 
-The API preserves the illustrative document contract, including accepting whitespace-only names as non-empty strings. This assumption is explicit in the README and tests. Ask the instructor if they intend trimmed nonblank names instead.
+Browser commits created the actual remote history after terminal authentication failed. The local folder has an independent initial commit. Do not force push it over GitHub. Once terminal authentication works, clone the private repository into a fresh folder:
+
+```powershell
+git clone https://github.com/geetikareddy98-beep/internal-practicals-fastapi.git
+Set-Location internal-practicals-fastapi
+git switch -c feature/copilot-review
+```
+
+Use the browser/credential manager for sign-in; never paste tokens or passwords into chat or commit them. Future pushes to main will run CI and publish a private SHA-tagged image because ENABLE_GHCR_PUBLISH is now true with user approval.
