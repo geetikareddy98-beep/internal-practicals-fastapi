@@ -4,7 +4,7 @@ This teaching project supports Exam 1 GitHub DevOps and Exam 2 GitHub Copilot. I
 
 ## Verified GitHub results
 
-The private repository, feature PR #8, main/PR CI checks, private Projects board and approved private GHCR publication are complete. See [the execution record](evidence/github-progress.md) for actual run links, image tag/digest and screenshots. Local Docker execution, genuine Copilot output and plan-supported branch-protection enforcement remain unfinished.
+The repository is now public by explicit user approval; main protection applies, and feature PR #8, main/PR CI checks, the private Projects board and approved private GHCR publication are complete. See [the execution record](evidence/github-progress.md) for actual run links, image tag/digest and screenshots. Genuine Copilot web suggestions and reviewed test additions are recorded. Local Docker execution still requires the Windows prerequisites in docs/setup-docker.md.
 
 ## Setup on Windows
 
@@ -41,6 +41,8 @@ Names are preserved exactly, including Unicode and whitespace, following the doc
 .\.venv\Scripts\python.exe -m ruff format --check .
 .\.venv\Scripts\python.exe -m pytest -q --cov=app --cov-branch --cov-report=term-missing
 ```
+
+Copilot-assisted documentation review: `--cov=app` measures the application package, while `--cov-report=term-missing` lists uncovered lines. Coverage shows executed code; correct assertions and meaningful boundary tests are still necessary, and it cannot establish concurrency safety.
 
 Coverage must be at least 81%, which enforces the exam's greater-than-80% target. Tests reset shared state and check response bodies, invalid input, boundary values, Unicode, malformed JSON, sequential identifiers, OpenAPI, and sum behavior. `app.numeric.total` sums integers/floats while ignoring `None`; empty/all-None input returns zero. Unsupported strings raise `TypeError`; Python's normal numeric behavior applies to booleans and floating-point rounding.
 
