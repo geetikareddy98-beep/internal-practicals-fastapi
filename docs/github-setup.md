@@ -1,6 +1,24 @@
-# GitHub setup and evidence procedure
+# GitHub setup and continuation
 
-Current status: no remote repository has been created or pushed by this project. Repository name suggestion: `internal-practicals-fastapi`. Obtain the user's chosen owner/name and visibility before creating it. Do not make it public or publish an image without explicit approval.
+The approved private repository now exists at https://github.com/geetikareddy98-beep/internal-practicals-fastapi. PR #8 was merged with approval, CI/CD succeeded and a private GHCR image was published. The board is https://github.com/users/geetikareddy98-beep/projects/1. See ../evidence/github-progress.md for exact results and remaining limitations.
+
+For future terminal work, authenticate using the normal Git browser/credential-manager flow and clone into a fresh folder. Do not push the separate local initial history over the browser-created remote history. Never force push.
+
+```powershell
+git clone https://github.com/geetikareddy98-beep/internal-practicals-fastapi.git
+Set-Location internal-practicals-fastapi
+git switch -c feature/copilot-review
+# Perform and review actual Copilot work, then run README verification commands.
+git add .
+git commit -m "Record reviewed Copilot assistance"
+git push -u origin feature/copilot-review
+```
+
+Only make that commit after the stated Copilot activity actually occurs. Open a PR into main, link its real issue and wait for checks. The publisher is enabled with user approval; main pushes publish private SHA-tagged images.
+
+## Original setup walkthrough
+
+The following is the initial walkthrough for reference. Those repository/board/CI/publication steps are already completed; do not repeat the initialization or remote-add commands in the existing repository. Plan-supported enforcement, local Docker and Copilot remain unfinished.
 
 ## 1 Create the repository
 

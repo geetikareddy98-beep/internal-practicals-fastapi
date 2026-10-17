@@ -1,5 +1,9 @@
 # Copilot development and evidence procedure
 
+## Current account status
+
+GitHub is signed in and account settings show Copilot Free. Browser prompt attempts returned no assistant output; the browser reports CopilotAuthTokenUnlicensedError (404). Earlier setup redirected to Pro signup; no payment or subscription was made. Resolve the Copilot account/editor access before recording actual suggestions. This remains incomplete.
+
 ## Actual provenance
 
 The initial local implementation, tests and documentation were produced with Codex in this chat. This is not evidence of GitHub Copilot use. GitHub Copilot was not detected in the inspected VS Code extension inventory. No Copilot prompt, suggestion acceptance, timing gain or successful CLI invocation is claimed here.

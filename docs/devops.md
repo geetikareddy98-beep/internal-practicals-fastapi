@@ -30,13 +30,13 @@ The multi-stage Dockerfile separates installed runtime packages from the build s
 
 | Measure | How to obtain it | Current status |
 | --- | --- | --- |
-| First-run PR pass rate | Passing first CI runs divided by PRs | No remote runs yet |
-| PR lead time | Open-to-merge timestamps | No PR yet |
-| Build duration | Actions job timings | No remote runs yet |
+| First-run PR pass rate | Passing first CI runs divided by PRs | Verified successful runs; see `evidence/github-progress.md` |
+| PR lead time | Open-to-merge timestamps | PR #8 created and merged on 17 October 2026; exact events are on GitHub |
+| Build duration | Actions job timings | Verified successful runs; see `evidence/github-progress.md` |
 | Coverage | Actual pytest-cov report | See local results |
 | Deployment frequency | Approved deployment history | No target specified |
-| Change failure rate | Failed releases divided by releases | No releases yet |
-| Recovery time | Incident start-to-restoration time | No incident/release history |
+| Change failure rate | Failed releases divided by releases | Private GHCR artifact published; no application deployment |
+| Recovery time | Incident start-to-restoration time | No production deployment or incident history |
 
 These measures should improve feedback and reliability; they should not pressure rushed changes. No values are invented for missing observations.
 
@@ -56,3 +56,7 @@ Version control, code review, repeatable checks, container artifacts and issue t
 - FastAPI testing: https://fastapi.tiangolo.com/tutorial/testing/
 - pytest: https://docs.pytest.org/
 - coverage.py: https://coverage.readthedocs.io/
+
+## Remote execution retrospective
+
+What worked: authenticated browser uploads preserved the project layout when terminal credentials were unavailable, and main/PR checks passed. The approved merge closed the CI issue and the approved main publisher produced a private SHA-tagged package. What delayed completion: Git credential-helper restrictions, private-repository branch-protection plan limits, missing local Docker, and Copilot authentication failing despite Free settings. Next improvement: verify IDE entitlement, a Docker engine and the required GitHub plan before the next practical. Source tests and hosted evidence are recorded separately from pending work.
