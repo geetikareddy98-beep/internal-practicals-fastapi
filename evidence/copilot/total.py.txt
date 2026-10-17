@@ -1,0 +1,26 @@
+from typing import Iterable, Optional, Union
+
+Number = Union[int, float]
+
+def total(values: Iterable[Optional[Number]]) -> Number:
+    """
+    Return the sum of numeric entries in `values`, ignoring None entries.
+
+    Parameters
+    ----------
+    values : Iterable[Optional[Union[int, float]]]
+        An iterable containing ints, floats, or None. None entries are ignored.
+
+    Returns
+    -------
+    int | float
+        The sum of the numeric entries. If there are no numeric entries, returns 0.
+
+    Assumptions
+    -----------
+    - Non-None items are expected to be ints or floats. Passing other types
+      (e.g. strings) will raise a TypeError when summed.
+    - The function does not coerce types (no implicit conversions beyond Python's
+      numeric promotion between int and float).
+    """
+    return sum(v for v in values if v is not None)
