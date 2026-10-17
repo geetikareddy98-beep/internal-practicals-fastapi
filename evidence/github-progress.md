@@ -1,3 +1,5 @@
+CURRENT STATUS: Public repository approved by user; main protection enforced; actual Copilot session recorded; 30 local tests pass at 100%. Local Docker remains pending. Earlier account limitations below are historical; see the subsequent update at the end.
+
 # GitHub execution record
 
 Updated 17 October 2026 after signing in through the browser. This record supersedes the earlier pending GitHub statuses in the initial setup guides.
@@ -19,7 +21,7 @@ Updated 17 October 2026 after signing in through the browser. This record supers
 
 ## Limitations that still matter
 
-GitHub explicitly says these protection rules will NOT be enforced for this private repository on the current account plan. Required CODEOWNERS review is also plan-gated. The file has valid owner rules, but enforcement is not claimed. Resolve the plan/instructor requirement without changing visibility unless the user separately approves it.
+At the initial private-repository stage, GitHub explicitly said these protection rules would NOT be enforced for this private repository on the current account plan. Required CODEOWNERS review is also plan-gated. The file has valid owner rules, but enforcement is not claimed. Resolve the plan/instructor requirement without changing visibility unless the user separately approves it.
 
 The Copilot web interface initially reported license setup in progress. A real refactoring prompt was attempted, but no assistant response appeared; after reload, the interface redirected to Copilot Pro signup. No subscription was started and no billing information was entered. This attempt is not accepted as completed Copilot-assisted development. Enable an eligible Copilot experience before recording real suggestions.
 
@@ -27,7 +29,7 @@ Docker is not available locally. The successful hosted container-build job does 
 
 ## Local Git and remote history
 
-The local project was committed as 854c117 using the already configured identity matching the signed-in GitHub account. Terminal push failed because the credential helper could not run in the restricted environment. The remote therefore has genuine browser-created commits with a different history. Do not force push the independent local history over the remote. When terminal Git authentication is available, clone the private repository into a fresh folder to continue from its actual history.
+The local project was committed as 854c117 using the already configured identity matching the signed-in GitHub account. Terminal push failed because the credential helper could not run in the restricted environment. The remote therefore has genuine browser-created commits with a different history. Do not force push the independent local history over the remote. When terminal Git authentication is available, clone the repository into a fresh folder to continue from its actual history.
 
 ## Evidence files
 
@@ -50,8 +52,16 @@ Package page: https://github.com/geetikareddy98-beep/internal-practicals-fastapi
 
 Board fields now include Status, Assignees, Priority, Due Date and Iteration. Iteration uses GitHub's default two-week periods starting 17 October 2026; no exam deadline or task due dates were invented or assigned. The bug/documentation labels existed by default; CI/CD and security labels were created. Issue #7 is labeled documentation and remains In Progress until the full evidence set is finished.
 
-## Remaining Copilot and local Docker work
+## Historical account limitation (resolved for web Copilot)
 
 Copilot settings now show Free, chat enabled and zero usage. However, repeated actual prompt attempts produced no response. The browser log reports `CopilotAuthTokenUnlicensedError: Copilot auth token endpoint not found (404)`. The earlier signup redirect did not result in a subscription or billing changes. The prompt remains prepared for a user-resolved Copilot session. No generated suggestion or completed Copilot development is claimed.
 
 Local Docker installation/engine access and plan-supported branch-protection enforcement remain unfinished. Successful hosted container execution does not replace local evidence. The original student name still needs confirmation before any exam cover sheet is changed.
+
+## Subsequent verified update: 17 October 2026
+
+User explicitly approved making the repository public to enforce protection. Visibility changed to Public; the main rule now applies to one branch without the earlier plan warning. PRs, up-to-date branches, lint/tests/container-build passing checks and administrator enforcement are configured; force pushes/deletion are disallowed. Independent approval remains off under the solo adaptation; CODEOWNERS still identifies the real owner. Earlier private/plan-limit screenshots are historical, superseded by 13-branch-protection-enforced.jpg and 14-public-repository.jpg.
+
+Actual GitHub Copilot Free web assistance now succeeded: API, tests, numeric refactor, README/API reference and coverage-command explanation. See docs/copilot-evidence.md and evidence/copilot/ for genuine raw responses and accepted/rejected decisions. Two accepted tests bring the local suite to 30, all passing at 100% coverage; see evidence/local/results-after-copilot.txt. Earlier 28-test CI evidence remains historical. No IDE or Copilot CLI execution is claimed.
+
+The remaining local Docker prerequisite is explicit: WSL and Docker Desktop were absent. User approved preparing official setup; docs/setup-docker.md supplies the exact owner steps. Administrator prompts, agreement and restart are for the user. Do not mark local Docker or the full-evidence issue complete until actual local execution succeeds. The private package/board have not been made public by the repository visibility change instruction.

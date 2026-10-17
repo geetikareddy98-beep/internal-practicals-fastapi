@@ -1,0 +1,29 @@
+Actual post-Copilot verification 2026-10-17T17:13:14.494093+05:30
+COMMAND: python -m ruff check .
+All checks passed!
+
+
+EXIT CODE: 0
+COMMAND: python -m ruff format --check .
+16 files already formatted
+
+
+EXIT CODE: 0
+COMMAND: python -m pytest -q --cov=app --cov-branch --cov-report=term-missing --cov-report=xml:evidence/local/coverage.xml --junitxml=evidence/local/pytest.xml
+..............................                                           [100%]
+=============================== tests coverage ================================
+______________ coverage: platform win32, python 3.12.14-final-0 _______________
+
+Name              Stmts   Miss Branch BrPart  Cover   Missing
+-------------------------------------------------------------
+app\__init__.py       0      0      0      0   100%
+app\main.py          16      0      0      0   100%
+app\numeric.py        2      0      0      0   100%
+-------------------------------------------------------------
+TOTAL                18      0      0      0   100%
+Coverage XML written to file evidence/local/coverage.xml
+Required test coverage of 81.0% reached. Total coverage: 100.00%
+30 passed in 2.61s
+
+
+EXIT CODE: 0

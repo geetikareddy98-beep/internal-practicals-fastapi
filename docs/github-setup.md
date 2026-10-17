@@ -1,6 +1,6 @@
 # GitHub setup and continuation
 
-The approved private repository now exists at https://github.com/geetikareddy98-beep/internal-practicals-fastapi. PR #8 was merged with approval, CI/CD succeeded and a private GHCR image was published. The board is https://github.com/users/geetikareddy98-beep/projects/1. See ../evidence/github-progress.md for exact results and remaining limitations.
+The repository was created privately and is now public with explicit user approval; it exists at https://github.com/geetikareddy98-beep/internal-practicals-fastapi. PR #8 was merged with approval, CI/CD succeeded and a private GHCR image was published. The board is https://github.com/users/geetikareddy98-beep/projects/1. See ../evidence/github-progress.md for exact results and remaining limitations.
 
 For future terminal work, authenticate using the normal Git browser/credential-manager flow and clone into a fresh folder. Do not push the separate local initial history over the browser-created remote history. Never force push.
 
@@ -18,7 +18,7 @@ Only make that commit after the stated Copilot activity actually occurs. Open a 
 
 ## Original setup walkthrough
 
-The following is the initial walkthrough for reference. Those repository/board/CI/publication steps are already completed; do not repeat the initialization or remote-add commands in the existing repository. Plan-supported enforcement, local Docker and Copilot remain unfinished.
+The following is the initial walkthrough for reference. Those repository/board/CI/publication steps are already completed; do not repeat the initialization or remote-add commands in the existing repository. Main protection and actual Copilot web assistance are now verified; local Docker remains unfinished.
 
 ## 1 Create the repository
 
@@ -94,3 +94,11 @@ Capture the board with all five statuses and example issues visible, plus one is
 - https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository
 - https://docs.github.com/en/issues/planning-and-tracking-with-projects
 - https://docs.docker.com/desktop/setup/install/windows-install/
+
+## Subsequent verified update: 17 October 2026
+
+User explicitly approved making the repository public to enforce protection. Visibility changed to Public; the main rule now applies to one branch without the earlier plan warning. PRs, up-to-date branches, lint/tests/container-build passing checks and administrator enforcement are configured; force pushes/deletion are disallowed. Independent approval remains off under the solo adaptation; CODEOWNERS still identifies the real owner. Earlier private/plan-limit screenshots are historical, superseded by 13-branch-protection-enforced.jpg and 14-public-repository.jpg.
+
+Actual GitHub Copilot Free web assistance now succeeded: API, tests, numeric refactor, README/API reference and coverage-command explanation. See docs/copilot-evidence.md and evidence/copilot/ for genuine raw responses and accepted/rejected decisions. Two accepted tests bring the local suite to 30, all passing at 100% coverage; see evidence/local/results-after-copilot.txt. Earlier 28-test CI evidence remains historical. No IDE or Copilot CLI execution is claimed.
+
+The remaining local Docker prerequisite is explicit: WSL and Docker Desktop were absent. User approved preparing official setup; docs/setup-docker.md supplies the exact owner steps. Administrator prompts, agreement and restart are for the user. Do not mark local Docker or the full-evidence issue complete until actual local execution succeeds. The private package/board have not been made public by the repository visibility change instruction.

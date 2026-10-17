@@ -1,0 +1,23 @@
+import pytest
+from total import total
+
+
+def test_empty_list_returns_zero():
+    assert total([]) == 0
+
+
+def test_all_none_returns_zero():
+    assert total([None, None, None]) == 0
+
+
+def test_mixed_ints_and_floats_and_none():
+    assert total([1, None, 2.5, 3]) == pytest.approx(6.5)
+
+
+def test_negative_values():
+    assert total([-1, None, -2.5, 0]) == pytest.approx(-3.5)
+
+
+def test_decimal_precision():
+    # floating-point sums can have tiny rounding differences; use approx
+    assert total([0.1, 0.2, None]) == pytest.approx(0.3)

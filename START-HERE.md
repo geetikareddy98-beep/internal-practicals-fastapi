@@ -1,13 +1,13 @@
 # Start here
 
-The code and GitHub pipeline are working. Both exams still require genuine Copilot output, local Docker execution, and resolution of GitHub's private-repository branch-protection limitation before they can be called fully complete.
+The code and GitHub pipeline are working. Actual Copilot assistance is now recorded and the user-approved public repository supports enforced main protection. Local Docker execution still needs the Windows setup described below.
 
 ## Verified deliverables
 
-- Private repository: https://github.com/geetikareddy98-beep/internal-practicals-fastapi
+- Public repository (approved): https://github.com/geetikareddy98-beep/internal-practicals-fastapi
 - Feature PR #8 passed all three checks and was merged with user approval.
 - Main CI/CD run: https://github.com/geetikareddy98-beep/internal-practicals-fastapi/actions/runs/39027867693
-- Ruff passes; 28 tests pass with 100% measured coverage locally and in GitHub CI.
+- Ruff passes; 30 tests pass with 100% coverage locally after Copilot review; earlier hosted CI verified 28 tests.
 - Live local API returns health 200, creation 201 and validation 422.
 - Hosted Docker image build and health smoke test pass.
 - Approved GHCR publication succeeded; actual package visibility verified Private.
@@ -34,14 +34,12 @@ Open http://127.0.0.1:8000/docs. Stop with Ctrl+C. The ZIP excludes the virtual 
 
 ## Remaining personal steps
 
-1. Resolve Copilot access in your account or editor. Settings show Free, but web chat reports an unlicensed authentication error and has returned no suggestion. No paid plan was purchased. Then complete the actual tasks in docs/copilot-evidence.md and capture real responses and reviewed changes.
-2. Install/start a working Docker engine if approved on this machine. Run the README build/run commands and capture local health evidence. Hosted CI evidence is already genuine but does not replace this local step.
-3. Ask your instructor how to handle branch protection on the approved private repository: GitHub explicitly reports the saved rule is not enforced under the current plan. No visibility or paid-plan change was made.
-4. Confirm the submission name before editing an exam cover sheet. The original documents name Sudheesh Vinnakota; they remain unchanged.
+1. Complete the official Windows WSL/Docker setup in `docs/setup-docker.md`. Administrator prompts, agreements and any restart need the computer owner. Then run the actual local Docker build, container and health request, and capture the result. Hosted container CI is genuine but does not replace local execution.
+2. Confirm the submission name before editing an exam cover sheet. The original documents name Sudheesh Vinnakota; they remain unchanged.
 
 ## Continue Git work safely
 
-Browser commits created the actual remote history after terminal authentication failed. The local folder has an independent initial commit. Do not force push it over GitHub. Once terminal authentication works, clone the private repository into a fresh folder:
+Browser commits created the actual remote history after terminal authentication failed. The local folder has an independent initial commit. Do not force push it over GitHub. Once terminal authentication works, clone the repository into a fresh folder:
 
 ```powershell
 git clone https://github.com/geetikareddy98-beep/internal-practicals-fastapi.git

@@ -60,3 +60,11 @@ Version control, code review, repeatable checks, container artifacts and issue t
 ## Remote execution retrospective
 
 What worked: authenticated browser uploads preserved the project layout when terminal credentials were unavailable, and main/PR checks passed. The approved merge closed the CI issue and the approved main publisher produced a private SHA-tagged package. What delayed completion: Git credential-helper restrictions, private-repository branch-protection plan limits, missing local Docker, and Copilot authentication failing despite Free settings. Next improvement: verify IDE entitlement, a Docker engine and the required GitHub plan before the next practical. Source tests and hosted evidence are recorded separately from pending work.
+
+## Subsequent verified update: 17 October 2026
+
+User explicitly approved making the repository public to enforce protection. Visibility changed to Public; the main rule now applies to one branch without the earlier plan warning. PRs, up-to-date branches, lint/tests/container-build passing checks and administrator enforcement are configured; force pushes/deletion are disallowed. Independent approval remains off under the solo adaptation; CODEOWNERS still identifies the real owner. Earlier private/plan-limit screenshots are historical, superseded by 13-branch-protection-enforced.jpg and 14-public-repository.jpg.
+
+Actual GitHub Copilot Free web assistance now succeeded: API, tests, numeric refactor, README/API reference and coverage-command explanation. See docs/copilot-evidence.md and evidence/copilot/ for genuine raw responses and accepted/rejected decisions. Two accepted tests bring the local suite to 30, all passing at 100% coverage; see evidence/local/results-after-copilot.txt. Earlier 28-test CI evidence remains historical. No IDE or Copilot CLI execution is claimed.
+
+The remaining local Docker prerequisite is explicit: WSL and Docker Desktop were absent. User approved preparing official setup; docs/setup-docker.md supplies the exact owner steps. Administrator prompts, agreement and restart are for the user. Do not mark local Docker or the full-evidence issue complete until actual local execution succeeds. The private package/board have not been made public by the repository visibility change instruction.

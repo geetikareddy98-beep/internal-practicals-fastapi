@@ -29,3 +29,8 @@ def test_total_does_not_modify_input():
 def test_unsupported_string_raises():
     with pytest.raises(TypeError):
         total([1, "2"])
+
+
+def test_decimal_precision():
+    """Copilot suggested this case to account for floating-point rounding."""
+    assert total([0.1, 0.2, None]) == pytest.approx(0.3)

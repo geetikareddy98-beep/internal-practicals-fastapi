@@ -1,0 +1,63 @@
+from fastapi.testclient import TestClient
+import pytest
+from main import app
+
+
+@pytest.fixture(autouse=True)
+def client():
+    """
+    Provide a TestClient and ensure the in-memory store is cleared before each test.
+    Using autouse=True so every test runs with a fresh store.
+    """
+    client = TestClient(app)
+    app.state.items = []
+    yield client
+    app.state.items = []
+
+
+def test_health(client):
+    r = client.get("/health")
+    assert r.status_code == 200
+    assert r.json() == {"status": "ok"}
+
+
+def test_create_valid(client):
+    payload = {"name": "  preserved whitespace  "}
+    r = client.post("/items", json=payload)
+    assert r.status_code == 201
+    data = r.json()
+    assert data["id"] == 1
+    # whitespace preserved exactly
+    assert data["name"] == payload["name"]
+    # stored in-memory
+    assert app.state.items == [{"id": 1, "name": payload["name"]}]
+
+
+def test_missing_name_returns_422(client):
+    # missing 'name' field -> validation error
+    r = client.post("/items", json={})
+    assert r.status_code == 422
+
+
+def test_empty_name_returns_422(client):
+    # empty string length 0 -> violates min_length=1
+    r = client.post("/items", json={"name": ""})
+    assert r.status_code == 422
+
+
+def test_overlong_name_returns_422(client):
+    # 101 characters -> violates max_length=100
+    r = client.post("/items", json={"name": "a" * 101})
+    assert r.status_code == 422
+
+
+def test_non_string_name_returns_422(client):
+    # StrictStr ensures non-string values (e.g., numbers) are rejected
+    r = client.post("/items", json={"name": 123})
+    assert r.status_code == 422
+
+
+def test_top_level_json_array_returns_422(client):
+    # top-level array instead of object -> request body shape mismatch -> 422
+    r = client.post("/items", json=[{"name": "foo"}])
+    assert r.status_code == 422
